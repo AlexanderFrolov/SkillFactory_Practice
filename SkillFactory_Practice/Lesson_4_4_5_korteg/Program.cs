@@ -19,5 +19,4 @@ namespace Lesson_4_4_5_korteg
             Pet.Age = double.Parse(Console.ReadLine());
         }
     }
-    }
 }
