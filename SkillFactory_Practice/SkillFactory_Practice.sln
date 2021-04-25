@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lesson_4_3_11_dvumernuy_mas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lesson_4_3_12_sort_massiv", "lesson_4_3_12_sort_massiv\lesson_4_3_12_sort_massiv.csproj", "{51D81AA4-CD8A-4F31-80CA-E64A199A1865}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson_4_4_5_korteg", "Lesson_4_4_5_korteg\Lesson_4_4_5_korteg.csproj", "{E07E9E83-B0D0-4EDB-85B2-2E484B591E86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{51D81AA4-CD8A-4F31-80CA-E64A199A1865}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51D81AA4-CD8A-4F31-80CA-E64A199A1865}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51D81AA4-CD8A-4F31-80CA-E64A199A1865}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E07E9E83-B0D0-4EDB-85B2-2E484B591E86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E07E9E83-B0D0-4EDB-85B2-2E484B591E86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E07E9E83-B0D0-4EDB-85B2-2E484B591E86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E07E9E83-B0D0-4EDB-85B2-2E484B591E86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
