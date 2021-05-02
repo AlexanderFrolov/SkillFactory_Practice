@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.3_parameters", "5.3_param
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.3.11__5.3.13_out_ref_in", "5.3.11__5.3.13_out_ref_in\5.3.11__5.3.13_out_ref_in.csproj", "{75EC6E63-94E9-48E5-BFB1-1B295930A308}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "recursion_5.5.3__5.5.8", "recursion_5.5.3__5.5.8\recursion_5.5.3__5.5.8.csproj", "{6D423814-C584-4603-B390-2436D4583B1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeProject", "HomeProject\HomeProject.csproj", "{B7563832-6696-4D81-BFAE-A8F5EBA4CCDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{75EC6E63-94E9-48E5-BFB1-1B295930A308}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75EC6E63-94E9-48E5-BFB1-1B295930A308}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75EC6E63-94E9-48E5-BFB1-1B295930A308}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D423814-C584-4603-B390-2436D4583B1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D423814-C584-4603-B390-2436D4583B1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D423814-C584-4603-B390-2436D4583B1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D423814-C584-4603-B390-2436D4583B1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7563832-6696-4D81-BFAE-A8F5EBA4CCDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7563832-6696-4D81-BFAE-A8F5EBA4CCDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7563832-6696-4D81-BFAE-A8F5EBA4CCDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7563832-6696-4D81-BFAE-A8F5EBA4CCDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
