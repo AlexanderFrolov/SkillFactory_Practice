@@ -6,11 +6,8 @@ namespace Task1
     class Program
     {
 
-        static void Delete_TimeSpan30()
+        static void Delete_TimeSpan30(string dirName)
         {
-            //"C:/Users/Alexander Frolov/Desktop/temp"
-            Console.WriteLine("Укажите путь к папке в которой будут удалены файлы и папки не используемые более 30 минут:");
-            string dirName = Console.ReadLine();
             var dirInfo = new DirectoryInfo(dirName);
             if (dirInfo.Exists) // Проверим, что директория существует
             {
@@ -54,7 +51,10 @@ namespace Task1
         static void Main(string[] args)
         {
             Console.WriteLine("Удалим все что не использовалось больше 30 минут");
-            Delete_TimeSpan30();
+            //"C:/Users/Alexander Frolov/Desktop/temp"
+            Console.WriteLine("Укажите путь к папке в которой будут удалены файлы и папки не используемые более 30 минут:");
+            string dirName = Console.ReadLine();
+            Delete_TimeSpan30(dirName);
         }
 
     }
