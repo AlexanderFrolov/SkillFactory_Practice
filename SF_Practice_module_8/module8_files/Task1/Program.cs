@@ -17,8 +17,6 @@ namespace Task1
                 TimeSpan diff;
                 try
                 {
-
-
                     // пройдем по файлам. если больше 30 то удаляем.
                     foreach (FileInfo file in dirInfo.GetFiles())
                     {
@@ -57,10 +55,7 @@ namespace Task1
         {
             Console.WriteLine("Удалим все что не использовалось больше 30 минут");
             Delete_TimeSpan30();
-
         }
-
-
 
     }
 }
