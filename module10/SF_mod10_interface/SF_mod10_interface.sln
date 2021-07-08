@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SF_mod10_interface_dependency_injection", "SF_mod10_interface\SF_mod10_interface_dependency_injection.csproj", "{A66E8D4D-D6D2-4DE8-9106-57B56B8AC0ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mini_calculator", "mini_calculator\mini_calculator.csproj", "{4E0ADCDC-0D9D-4AAD-87AC-E4DC11BF062B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A66E8D4D-D6D2-4DE8-9106-57B56B8AC0ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A66E8D4D-D6D2-4DE8-9106-57B56B8AC0ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A66E8D4D-D6D2-4DE8-9106-57B56B8AC0ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A66E8D4D-D6D2-4DE8-9106-57B56B8AC0ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E0ADCDC-0D9D-4AAD-87AC-E4DC11BF062B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E0ADCDC-0D9D-4AAD-87AC-E4DC11BF062B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E0ADCDC-0D9D-4AAD-87AC-E4DC11BF062B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E0ADCDC-0D9D-4AAD-87AC-E4DC11BF062B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DC9F9717-6B7C-4C54-926E-84682EE83F42}
+	EndGlobalSection
+EndGlobal
