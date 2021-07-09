@@ -2,9 +2,16 @@
 
 namespace SF_mod10_interface
 {
-    class Program
+    public interface ILogger
     {
-        static ILogger Logger { get; set; }
+        void Event(string message);
+
+        void Error(string message);
+    }
+
+    public class Program
+    {
+        public static ILogger Logger { get; set; }
 
         static void Main(string[] args)
         {
@@ -17,15 +24,7 @@ namespace SF_mod10_interface
             worker1.Work();
             worker2.Work();
             worker3.Work();
-
         }
-    }
-
-    public interface ILogger
-    {
-        void Event(string message);
-        void Error(string message);
-
     }
 
     public class Logger : ILogger

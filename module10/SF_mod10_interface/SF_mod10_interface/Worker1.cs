@@ -1,4 +1,8 @@
-﻿using System;
+﻿// <copyright file="Worker1.cs" company="My Company Name">
+// Copyright (c) 2021 All Rights Reserved
+// </copyright>
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
@@ -7,11 +11,12 @@ namespace SF_mod10_interface
 {
     class Worker1 : Logger.IWorker
     {
-        ILogger Logger { get; }
         public Worker1(ILogger logger)
         {
             Logger = logger;
         }
+
+        ILogger Logger { get; }
 
         public void Work()
         {
