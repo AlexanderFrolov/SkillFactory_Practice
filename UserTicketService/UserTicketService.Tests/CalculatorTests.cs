@@ -15,6 +15,7 @@ namespace UserTicketService.Tests
             var calculator = new Calculator();
 
             Assert.Equal(8, calculator.Multiplication(2, 4));
+            
         }
     }
 }
