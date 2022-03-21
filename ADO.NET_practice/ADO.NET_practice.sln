@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{ECC07521-20E0-4046-AA6B-70278F8A0E91}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BB8A933F-8010-41D4-8646-0E2E1E1B6B82} = {BB8A933F-8010-41D4-8646-0E2E1E1B6B82}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoNetLib", "AdoNetLib\AdoNetLib.csproj", "{BB8A933F-8010-41D4-8646-0E2E1E1B6B82}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECC07521-20E0-4046-AA6B-70278F8A0E91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECC07521-20E0-4046-AA6B-70278F8A0E91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECC07521-20E0-4046-AA6B-70278F8A0E91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECC07521-20E0-4046-AA6B-70278F8A0E91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB8A933F-8010-41D4-8646-0E2E1E1B6B82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB8A933F-8010-41D4-8646-0E2E1E1B6B82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB8A933F-8010-41D4-8646-0E2E1E1B6B82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB8A933F-8010-41D4-8646-0E2E1E1B6B82}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E62EA59-7FBD-4BB6-9918-6AD82E0C21B4}
+	EndGlobalSection
+EndGlobal
