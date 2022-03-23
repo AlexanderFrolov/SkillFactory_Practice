@@ -11,6 +11,5 @@ namespace Digital_Library.Models
         public string MiddleName { get; set; }
 
         public List<Book> Books { get; set; } = new List<Book>();
-
     }
 }
