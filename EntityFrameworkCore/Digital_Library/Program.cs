@@ -7,7 +7,8 @@ using Digital_Library.Repositories;
 namespace Digital_Library
 {
     class Program
-    {   
+    {
+        // 25.7.1. ПРАКТИЧЕСКОЕ ЗАДАНИЕ (PJ-02)
         static void Main(string[] args)
         {
             // наполняем базу тестовыми данными
