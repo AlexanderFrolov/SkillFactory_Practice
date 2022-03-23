@@ -59,8 +59,8 @@ namespace Digital_Library.Repositories
         public bool IsThereBookByAuthorAndTitle(string authorName, string authorSurname, string bookName, AppContext db)
         {
             return db.Books.Where(b => b.Author.Name == authorName &&
-                                             b.Author.Surname == authorSurname &&
-                                             b.Name == bookName).ToList().Any();
+                    b.Author.Surname == authorSurname &&
+                    b.Name == bookName).ToList().Any();
         }
 
         public List<string> GetBooksByGenreAndRangeYears(string genre, int startYear, int endYear, AppContext db)
@@ -75,8 +75,8 @@ namespace Digital_Library.Repositories
             }
                        
             return db.Books.Where(g => g.Genre.Name == genre)
-                  .Where(d => d.DateRelease.Year >= startYear && d.DateRelease.Year <= endYear)
-                  .Select(b => b.Name).ToList();
+                    .Where(d => d.DateRelease.Year >= startYear && d.DateRelease.Year <= endYear)
+                    .Select(b => b.Name).ToList();
         }
 
         public  Book SelectBookById(int bookId, AppContext db)
