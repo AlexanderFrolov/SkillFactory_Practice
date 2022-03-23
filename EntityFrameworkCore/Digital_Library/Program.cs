@@ -11,7 +11,7 @@ namespace Digital_Library
         static void Main(string[] args)
         {
             // наполняем базу тестовыми данными
-            //TestData.EnterTestDataIntoDatabase();
+            TestData.EnterTestDataIntoDatabase();
         
             using (AppContext db = new AppContext())
             {
