@@ -8,7 +8,7 @@ namespace Digital_Library.Repositories
 {
     class BookRepository
     {
-        public List<Book> GetAllBooksByYear(AppContext db, bool descending = false)
+        public List<Book> GetAllBooksOrderByYear(AppContext db, bool descending = false)
         {
             var books = db.Books.Include(g => g.Genre).Include(a => a.Author);
 
@@ -18,7 +18,7 @@ namespace Digital_Library.Repositories
                 return books.OrderBy(n => n.DateRelease.Year).ToList();
         }
 
-            public List<Book> GetAllBooksByName(AppContext db, bool descending = false)
+            public List<Book> GetAllBooksOrderByName(AppContext db, bool descending = false)
         {
             var books = db.Books.Include(g => g.Genre).Include(a => a.Author);
 

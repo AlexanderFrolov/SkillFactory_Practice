@@ -43,10 +43,10 @@ namespace Digital_Library
                 var result7 = br.GetLastBookByYear(db).Name;
 
                 //8.Получение списка всех книг, отсортированного в алфавитном порядке по названию.
-                var result8 = br.GetAllBooksByName(db, true);
+                var result8 = br.GetAllBooksOrderByName(db, true);
 
                 //9.Получение списка всех книг, отсортированного в порядке убывания года их выхода.
-                var result9 = br.GetAllBooksByYear(db, true);
+                var result9 = br.GetAllBooksOrderByYear(db, true);
             }
         }
     }
