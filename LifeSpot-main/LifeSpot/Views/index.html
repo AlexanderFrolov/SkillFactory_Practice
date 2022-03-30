@@ -6,14 +6,13 @@
 
     <script src="../Static/JS/index.js"></script>
     <script>
-        let session = new Map();
-       // checkAge();
-       // startUserSession(); 
-       // printSessionLog();
-
-       const inputParseFunction = function(){
-           return document.getElementsByTagName('input')[0].value.toLowerCase();
-       }
+        
+        // обработка сессии
+        handleSession(logger,  checker /* Коллбек-функции */);
+        
+        const inputParseFunction = function(){
+            return document.getElementsByTagName('input')[0].value.toLowerCase();
+        }
        
     </script>
     <!--Подключение стилей по относительному пути из внешнего файла-->

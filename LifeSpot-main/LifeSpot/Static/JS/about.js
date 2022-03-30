@@ -1,25 +1,91 @@
-function getReview() {
+/*
+* Оставить комментарий
+*
+* */
 
-    let userReview = {};
-   
-    userReview["userName"] = prompt("Введите ваше имя:")
-    if(userReview["userName"] == null){
-        return
+function Comment(){
+    // Запросим имя
+   this.author = prompt("Как вас зовут ?")
+   if(this.author == null){
+       this.empty = true
+       return
+   }
+ 
+   // Запросим текст
+   this.text = prompt("Оставьте отзыв")
+   if(this.text == null){
+       this.empty = true
+       return
+   }
+ 
+   // Сохраним текущее время
+   this.date = new Date().toLocaleString()
+}
+
+
+function addComment() {
+    // Создаем объект обычного комментария
+    const comment = new Comment() 
+    
+    // проверяем, успешно ли юзер осуществил ввод
+    if(comment.empty){
+        return;
     }
+
+    // Запросим,, хочет ли пользователь оставить полноценный отзыв или это будет обычный комментарий
+    let enableLikes = confirm('Разрешить пользователям оценивать ваш отзыв?')
    
-    userReview["textReview"] = prompt("Оставьте свой отзыв")
-    if(userReview["textReview"] == null){
-        return
+    if(enableLikes){
+        // Создадим для отзыва новый объект из прототипа - комментария
+        let review = Object.create(comment)
+        // и добавим ему нужное свойство
+        review.rate = 0;
+  
+        // Добавляем отзыв с возможностью пользовательских оценок
+        writeReview(review)
+    } else{
+        // Добавим простой комментарий без возможности оценки
+        writeReview(comment)
     }
-   
-    userReview["date"] = new Date().toLocaleString()
-   
-    addReviewOnAboutPage(userReview);
  }
 
- const addReviewOnAboutPage = userReview => {
 
-    document.getElementsByClassName('reviews')[0].innerHTML += 
-    '<p>' + userReview['userName'] + ' ' + userReview['date'] + '</p> <p>' + 
-        userReview['textReview'] + '</p>';
+
+ function addLike(id){
+    // достаем кнопочку
+    let element = document.getElementById(id);
+    //отделяем сердечко от значения кол-ва лайков
+    let array = element.innerText.split(' ');
+    // Вытащим искомое значение счётчика и сразу же преобразуем его в число, так как
+    // при сложении любого значения со строкой в JS будет строка, а нам этого не требуется
+    let resultNum = parseInt(array[array.length - 1], 10);
+    // Увеличим счётчик
+    resultNum += 1;
+  
+    // Сохраним измененное значение обратно в массив
+    array[array.length - 1] =  `${resultNum}`;
+       // Обновим текст элемента
+    element.innerText = array.join(' ');
+ }
+
+
+ /*
+* Запишем объект на страницу
+*
+* */
+ const writeReview = review => {
+    let likeCounter = '';
+   
+    // Для проверки, является ли объект отзывом, используем свойство hasOwnProperty
+    if(review.hasOwnProperty('rate')){
+        // Генерим идентификатор комментария.
+	    let commentId = Math.random();
+        likeCounter += '<button id="' + commentId + '" style="border:none" onclick="addLike(this.id)">' + `❤️ ${review.rate}</button>`;
+    }
+   
+    // Запишем результат
+    document.getElementsByClassName('reviews')[0].innerHTML += '    <div class="review-text">\n' +
+        `<p> <i> <b>${review['author']}</b>  ${review['date']}${likeCounter}</i></p>` +
+        `<p>${review['text']}</p>`  +   
+        '</div>';
  }
