@@ -1,3 +1,4 @@
+using ASP_NET5_App.Middlewares;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -5,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -26,19 +28,19 @@ namespace ASP_NET5_App
             {
                 app.UseDeveloperExceptionPage();
             }
+            
+            app.UseStaticFiles();
+            // processing HTTP errors
+            app.UseStatusCodePages();
 
-            app.UseRouting();
+            app.UseRouting();           
 
+            // connect the logic using the middleware layer software
+            app.UseMiddleware<LoggingMidlleware>();
 
-            //Добавляем компонент для логирования запросов с использованием метода Use.
-            app.Use(async (context, next) =>
-            {
-                // Для логирования данных о запросе используем свойста объекта HttpContext
-                Console.WriteLine($"[{DateTime.Now}]: New request to http://{context.Request.Host.Value + context.Request.Path}");
-                await next.Invoke();
-            });
+            //Console.WriteLine($"Launching project from: {env.ContentRootPath}");
 
-            //Добавляем компонент с настройкой маршрутов для главной страницы
+            // route for root page
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGet("/", async context =>
@@ -46,11 +48,12 @@ namespace ASP_NET5_App
                     await context.Response.WriteAsync($"Welcome to the {env.ApplicationName}!");
                 });
             });
-            // Все прочие страницы имеют отдельные обработчики
-            app.Map("/about", About);
-            app.Map("/config", Config);
-            
-            // Обработчик для ошибки "страница не найдена"
+
+            // routing 
+            app.Map("/config", builder => Config(builder, env));
+            app.Map("/about", builder => About(builder, env));
+
+            // if route not found
             app.Run(async (context) =>
             {
                 await context.Response.WriteAsync($"Page not found");
@@ -58,9 +61,8 @@ namespace ASP_NET5_App
 
         }
 
-
         /// <summary>
-        ///  Обработчик для страницы About
+        ///  About page handler
         /// </summary>
         private static void About(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -71,7 +73,7 @@ namespace ASP_NET5_App
         }
 
         /// <summary>
-        ///  Обработчик для главной страницы
+        ///  Config page handler
         /// </summary>
         private static void Config(IApplicationBuilder app, IWebHostEnvironment env)
         {

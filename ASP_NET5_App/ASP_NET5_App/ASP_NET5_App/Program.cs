@@ -22,6 +22,8 @@ namespace ASP_NET5_App
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    // Override the default path to static files
+                    webBuilder.UseWebRoot("Views");
                 });
     }
 }
